@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Проект OU02</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---------- PROJECT02 ONLY: SHIFT META BLOCK BELOW HEADER ---------- */
+    @media (max-width: 992px) {
+      .project-detail-hero__meta {
+        margin-top: 120px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .project-detail-hero__meta {
+        margin-top: 140px !important;
+      }
+    }
+
+    .project-nav-arrow {
+      position: absolute;
+      top: 860px;
+      z-index: 100;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 56px;
+      padding: 0 20px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.45),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.12),
+        0 8px 18px rgba(0, 0, 0, 0.08);
+      color: #000000;
+      text-decoration: none;
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .project-nav-arrow:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.28);
+      border-color: rgba(255, 255, 255, 0.7);
+      color: #ffffff;
+    }
+
+    .project-nav-arrow--left {
+      left: 20px;
+    }
+
+    .project-nav-arrow--right {
+      right: 20px;
+    }
+
+    .project-nav-arrow__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      color: inherit;
+      transform: translateY(0);
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    .project-nav-arrow__icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .project-nav-arrow__icon path {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 4.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.25s ease;
+    }
+
+    .project-nav-arrow__text {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Intro", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1;
+      text-transform: uppercase;
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+      color: inherit;
+      transform: translateY(1px);
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    .project-nav-arrow:hover .project-nav-arrow__icon,
+    .project-nav-arrow:hover .project-nav-arrow__text {
+      color: #ffffff;
+    }
+
+    /* Специально для шрифта цифр 02 и логотипов */
+    .project-detail-hero__ou {
+      font-family: "Unifix SP Demo", sans-serif;
+      font-weight: 400;
+    }
+
+    .project-detail-hero__number {
+      font-family: "Intro", sans-serif;
+      font-weight: 400;
+      margin-left: 4px;
+    }
+
+    .project-detail-hero__logos {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .project-detail-hero__logo {
+      height: 36px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 992px) {
+      .project-nav-arrow {
+        top: auto;
+        bottom: 110px;
+        min-height: 50px;
+        padding: 0 16px;
+        gap: 10px;
+      }
+
+      .project-nav-arrow--left {
+        left: 14px;
+      }
+
+      .project-nav-arrow--right {
+        right: 14px;
+      }
+
+      .project-nav-arrow__text {
+        font-size: 0.82rem;
+      }
+
+      .project-nav-arrow__icon {
+        width: 30px;
+        height: 30px;
+        flex-basis: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .project-nav-arrow {
+        min-height: 46px;
+        padding: 0 14px;
+        border-radius: 23px;
+      }
+
+      .project-nav-arrow__text {
+        font-size: 0.76rem;
+      }
+
+      .project-nav-arrow__icon {
+        width: 28px;
+        height: 28px;
+        flex-basis: 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .project-nav-arrow {
+        bottom: 90px;
+        min-height: 42px;
+        padding: 0 12px;
+        gap: 8px;
+      }
+
+      .project-nav-arrow__text {
+        font-size: 0.68rem;
+        transform: translateY(0.5px);
+      }
+
+      .project-nav-arrow__icon {
+        width: 24px;
+        height: 24px;
+        flex-basis: 24px;
+      }
+    }
+
+    .project-detail-gallery-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.08)),
+        url("img/projectsFON.png") center center / cover no-repeat;
+    }
+  </style>
+</head>
+<body class="project-detail-body">
+  <main class="project-detail-page">
+    <a href="project01.html" class="project-nav-arrow project-nav-arrow--left" aria-label="Предыдущий проект">
+      <span class="project-nav-arrow__icon" aria-hidden="true">
+        <svg viewBox="0 0 68 68">
+          <path d="M56 34H18"></path>
+          <path d="M33 18 17 34l16 16"></path>
+        </svg>
+      </span>
+      <span class="project-nav-arrow__text">предыдущий проект</span>
+    </a>
+
+    <a href="project03.html" class="project-nav-arrow project-nav-arrow--right" aria-label="Следующий проект">
+      <span class="project-nav-arrow__text">следующий проект</span>
+      <span class="project-nav-arrow__icon" aria-hidden="true">
+        <svg viewBox="0 0 68 68">
+          <path d="M12 34h38"></path>
+          <path d="M35 18l16 16-16 16"></path>
+        </svg>
+      </span>
+    </a>
+
+    <section class="project-detail-hero">
+      <img src="img/1project02.png" alt="Проект OU02" class="project-detail-hero__background" />
+      <div class="project-detail-hero__overlay"></div>
+
+      <header class="header">
+        <div class="header__container">
+          <nav class="nav">
+            <a href="index.html" class="nav__link">Главная</a>
+            <a href="project.html" class="nav__link nav__link--active">Проекты</a>
+            <a href="info.html" class="nav__link">Обо мне</a>
+            <a href="contacts.html" class="nav__link">Контакты</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="project-detail-hero__content">
+        <div class="project-detail-hero__meta">
+          <h1 class="project-detail-hero__title">
+            <span class="project-detail-hero__ou">OU</span><span class="project-detail-hero__number">02</span>
+          </h1>
+
+          <div class="project-detail-hero__tags">
+            <span class="project-detail-tag">Одежда</span>
+            <span class="project-detail-tag">Лекала</span>
+            <span class="project-detail-tag">Мокапы</span>
+            <span class="project-detail-tag">3D-Design</span>
+          </div>
+
+          <div class="project-detail-hero__description glass-panel-detail">
+            <p>Лекала были разработаны для бренда одежды. Была проведена большая работа над выбором материалов и форм.</p>
+          </div>
+
+          <div class="project-detail-hero__logos">
+            <img src="img/logos01.png" alt="Логотип проекта OU02" class="project-detail-hero__logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-gallery-section">
+      <div class="project-detail-gallery">
+        <figure class="project-detail-gallery__item project-detail-gallery__item--large">
+          <img src="img/2project02.png" alt="Деталь проекта OU02 02" class="project-detail-gallery__image" />
+        </figure>
+        <figure class="project-detail-gallery__item project-detail-gallery__item--tall">
+          <img src="img/3project02.png" alt="Деталь проекта OU02 03" class="project-detail-gallery__image" />
+        </figure>
+        <figure class="project-detail-gallery__item project-detail-gallery__item--small">
+          <img src="img/4project02.png" alt="Деталь проекта OU02 04" class="project-detail-gallery__image" />
+        </figure>
+        <figure class="project-detail-gallery__item project-detail-gallery__item--medium">
+          <img src="img/5project02.png" alt="Деталь проекта OU02 05" class="project-detail-gallery__image" />
+        </figure>
+        <figure class="project-detail-gallery__item project-detail-gallery__item--narrow">
+          <img src="img/6project02.png" alt="Деталь проекта OU02 06" class="project-detail-gallery__image" />
+        </figure>
+        <figure class="project-detail-gallery__item project-detail-gallery__item--small-bottom">
+          <img src="img/7project02.png" alt="Деталь проекта OU02 07" class="project-detail-gallery__image" />
+        </figure>
+      </div>
+
+      <footer class="footer footer--project-detail">
+        <div class="footer__container">
+          <div class="footer__contacts">
+            <div class="footer__contact">
+              <span class="footer__label">GMAIL</span>
+              <a href="mailto:nd@gmail.com" class="footer__value">nd@gmail.com</a>
+            </div>
+            <div class="footer__contact">
+              <span class="footer__label">TELEGRAM</span>
+              <a href="https://t.me/bybbs11" class="footer__value" target="_blank">@bybbs11</a>
+            </div>
+          </div>
+          <div class="footer__copyright">
+            © 2026 BYNIKITADENISOV | RIGHTS RESERVED
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
