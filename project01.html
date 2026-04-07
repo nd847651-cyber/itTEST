@@ -199,6 +199,7 @@
         flex-basis: 24px;
       }
     }
+
     .project-detail-gallery-section {
       min-height: 100vh;
       display: flex;
@@ -232,7 +233,10 @@
     </a>
 
     <section class="project-detail-hero">
-      <img src="img/1project01.png" alt="Проект OU01" class="project-detail-hero__background" />
+      <video class="project-detail-hero__background" autoplay muted loop playsinline>
+        <source src="img/project01.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает видео.
+      </video>
       <div class="project-detail-hero__overlay"></div>
 
       <header class="header">
@@ -299,11 +303,13 @@
               <span class="footer__label">GMAIL</span>
               <a href="mailto:nd@gmail.com" class="footer__value">nd@gmail.com</a>
             </div>
+
             <div class="footer__contact">
               <span class="footer__label">TELEGRAM</span>
-              <a href="https://t.me/bybbs11" class="footer__value" target="_blank">@bybbs11</a>
+              <a href="https://t.me/bybbs11" class="footer__value" target="_blank" rel="noopener noreferrer">@bybbs11</a>
             </div>
           </div>
+
           <div class="footer__copyright">
             © 2026 BYNIKITADENISOV | RIGHTS RESERVED
           </div>
